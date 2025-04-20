@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    td, th {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    #btnsave {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      width: 100%;
+      height: 40px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    #btnsave:hover {
+      background-color: #0056b3;
+    }
+
+    #studenttable th {
+      background-color: #f2f2f2;
+    }
+
+    #studenttable tbody tr:hover {
+      background-color: #f1f9ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Student Form</h1>
+
+  <div class="container">
+    <form id="studentform">
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" placeholder="Enter your name" id="name"></td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td><input id="age" type="text" placeholder="Enter your age"></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <input id="gender" type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+          </td>
+        </tr>
+        <tr>
+          <td>Courses</td>
+          <td>
+            <select id="course">
+              <option>Java</option>
+              <option>JavaScript</option>
+              <option>Python</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input id="email" type="text" placeholder="Enter your email"></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button id="btnsave">Save</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <table id="studenttable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Courses</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled via script -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
