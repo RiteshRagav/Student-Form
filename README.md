@@ -18,3 +18,4 @@ This is a simple web-based student information form created using **HTML**, **CS
 To view : 
 
 
+https://riteshragav.github.io/Student-Form/
